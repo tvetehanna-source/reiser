@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scorpio forside</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png">
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+            #toppfelt{
+                width: 100vw;
+                height: 100px;
+                background-color: coral;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 65px;
+                font-weight: bolder;
+                background-image: url(images/bakrund1.png);
+                background-size: cover;
+                background-position: center;
+                color: rgb(246, 248, 145);
+                text-shadow:
+                 3px 3px 0px coral,
+                 6px 6px 0px coral;
+                display:flex;
+                flex-direction: row;
+                position: fixed;
+                 left: 0px;
+                 top: 0px;
+                 z-index: 20;
+            }
+            #ventretopp{
+                height: 100px;
+                width: 200px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #hoyeretopp{
+                height: 100px;
+                width: 100px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+
+            }
+            
+            #midttopp{
+                height: 100px;
+                width: calc(100vw - 300px);
+                display:flex;
+                align-items: center;
+                justify-content: center;
+        
+            }
+            #linkefelt{
+                height: 50px;
+                width: 100vw;
+                background-color: rgb(246, 248, 145);
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                position: fixed;
+                 left: 0px;
+                 top: 100px;
+                 z-index: 20;
+
+                }    
+
+                 #linkefelt a{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: border;
+                font-size: 20px;
+                color: coral;
+                text-decoration: none;
+                
+
+            }
+
+        
+             body{
+                background-color: coral ;
+             }
+            
+             #hovedfelt{
+                width: 80vw;
+                min-height: 600px;
+                background-color: rgb(248, 141, 102);
+                margin: auto; 
+                padding: 20px;
+                padding-top: 175px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: rgb(252, 221, 111);
+                font-size: large;
+               
+             }
+
+             #surfebrett{
+                width: 75vw;
+                height: 200px;
+                background-color: rgb(246, 248, 145);
+                display: flex;
+                flex-direction: row;
+                color: coral;
+                box-shadow: 10px 10px 20px rgb(178, 93, 62);
+                align-items: 
+                
+             }
+
+            #surfebrettTekst {
+             display: none;
+             width: 100%;
+             background-color: rgb(248, 141, 102);
+             padding: 20px;
+             box-sizing: border-box;
+             }
+
+            
+             
+             #vaatdrakt{
+                width: 75vw;
+                height: 200px;
+                background-color: rgb(246, 248, 145);
+                display:flex;
+                flex-direction: row;
+                color: coral;
+                box-shadow: 10px 10px 20px rgb(178, 93, 62);
+
+             
+
+             }
+
+             
+             #badetoy{
+                width: 75vw;
+                height: 200px;
+                background-color: rgb(246, 248, 145);
+                display:flex;
+                flex-direction: row;
+                color: coral;
+                box-shadow: 10px 10px 20px rgb(178, 93, 62);
+
+             }
+             #sko{
+                 width: 75vw;
+                height: 200px;
+                background-color: rgb(246, 248, 145);
+                display:flex;
+                flex-direction: row;
+                color: coral;
+                box-shadow: 10px 10px 20px rgb(178, 93, 62);
+
+            
+             }
+
+
+
+            
+            
+    </style>
+</head>
+<body>
+   <div id="toppfelt"> 
+    
+    
+    <div id="venstretopp"><a href="index.html"><img src="images/skorpiongul..png" alt="" height="90px"></a></div>
+    <div id="midttopp">SCORPIO</div>
+    <div id="hoyeretopp">&#9776;</div>
+</div> 
+<div id="linkefelt">
+    <a href="produkter.html">PRODUKTER</a>
+    <a href="reiser.html">REISER</a>
+    <a href="omoss.html">OM OSS</a>
+</div>
+
+
+<div id="hovedfelt">
+   <h1>PRODUKTER</h1> 
+
+   <div>
+    <div id="surfebrett" onclick="visSurfebrett()">
+        <img src="images/surfebrett.jpg" alt="" height="200px"> 
+        <h1>SURFEBRETT</h1>
+
+        <div id="surfebrettTekst">
+
+                <h2>Surfebrett</h2>
+
+                <p>
+                    Koh Tao i Thailand bør være på listen over steder alle
+                    dykkere må besøke. Vanntemperaturen rundt Koh Tao er
+                    vanligvis mellom 27 og 30 grader Celsius i gjennomsnitt,
+                    som gjør det til et perfekt sted for dykking hele året.
+                    Øya er omgitt av et korallrev-økosystem som gir dykkere
+                    et mangfold av fantastisk marint liv.
+                </p>
+
+            </div>
+        
+        
+    </div>
+
+    <script>
+        function visSurfebrett() {
+     let tekst = document.getElementById("surfebrettTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+        }
+    </script>
+
+    <br>
+    <br>
+
+    <div id="vaatdrakt"><img src="images/våtdrakt.jpg" alt="" height="200px">
+        
+        
+    </div>
+    <br>
+    <br>
+
+    <div id="badetoy"><img src="images/badetøy.jpg" alt="" height="200px"></div>
+    <br>
+    <br>
+
+    <div id="sko"><img src="images/sko.jpg" alt="" height="200px"></div>
+   </div>
+   
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scorpio forside</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png">
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+            #toppfelt{
+                width: 100vw;
+                height: 100px;
+                background-color: coral;
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+                font-size: 65px;
+                font-weight: bolder;
+                background-image: url(images/bakrund1.png);
+                background-size: cover;
+                background-position: center;
+                color: rgb(246, 248, 145);
+                 text-shadow:
+                 3px 3px 0px coral,
+                 6px 6px 0px coral;
+                display:flex;
+                flex-direction: row;
+                
+            }
+            #ventretopp{
+                height: 100px;
+                width: 200px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #hoyeretopp{
+                height: 100px;
+                width: 100px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+
+            }
+            
+            #midttopp{
+                height: 100px;
+                width: calc(100vw - 300px);
+                display:flex;
+                align-items: center;
+                justify-content: center;
+        
+            }
+            #linkefelt{
+                height: 50px;
+                width: 100vw;
+                background-color: rgb(248, 244, 125);
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                 
+                }    
+
+                 #linkefelt a{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: border;
+                font-size: 20px;
+                color: coral;
+                text-decoration: none;
+                
+
+            }
+
+        
+             body{
+                background-color: coral;
+             }
+            
+             #hovedfelt{
+                width: 80vw;
+                min-height: 600px;
+                background-color: rgb(248, 141, 102);
+                margin: auto; 
+                padding: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: rgb(252, 221, 111);
+                font-size: large;
+             }
+             table{
+                border-collapse: collapse;
+                border-bottom: 2px solid #3f4259;
+             }
+             .reiser{
+                width: 75vw;
+                height: 400px;
+                display: grid;
+                color: rgb(252, 221, 111);
+
+             }
+             .rutenett {
+             width: 75vw;
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             gap: 20px;
+             }
+
+             .kolonne {
+             width: 100%;
+             }
+
+             .boks {
+             height: 200px;
+             background-color: rgb(246, 248, 145);
+             box-shadow: 10px 10px 20px rgb(187, 188, 91);
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+            }
+
+             .boks > div {
+             flex: 1;
+             text-align: center;
+             padding: 20px;
+             
+             
+             }
+             .boks img {
+              width: 50%;
+             height: 200px;
+             object-fit: cover;
+             }
+             
+             #thailand,
+             #afrika,
+             #portugal,
+             #hellas,
+             #norge,
+             #sveits {
+             display:flex;
+             flex-direction: row;
+             color: coral;
+             }
+
+             #thailandTekst,
+             #afrikaTekst,
+             #portugalTekst,
+             #hellasTekst,
+             #norgeTekst,
+             #sveitsTekst {
+             display: none;
+             width: 100%;
+             background-color: rgb(246, 248, 145);
+             color: coral;
+             padding: 20px;
+             box-sizing: border-box;
+             box-shadow: 10px 10px 20px rgb(187, 188, 91);
+}
+
+
+             
+
+
+          
+             
+            
+
+            
+
+            
+            
+    </style>
+</head>
+<body>
+   <div id="toppfelt"> 
+    
+    
+    <div id="venstretopp"><a href="index.html"><img src="images/skorpiongul..png" alt="" height="90px"></a></div>
+    <div id="midttopp">SCORPIO</div>
+    <div id="hoyeretopp">&#9776;</div>
+</div> 
+<div id="linkefelt">
+    <a href="produkter.html">PRODUKTER</a>
+    <a href="reiser.html">REISER</a>
+    <a href="omoss.html">OM OSS</a>
+</div>
+
+
+<div id="hovedfelt">
+ 
+<div id="hovedfelt">
+
+    <h1>REISER</h1>
+
+    <div class="rutenett">
+
+
+        <!-- THAILAND -->
+        <div class="kolonne">
+
+            <div class="boks" id="thailand" onclick="visThailand()">
+
+                <img src="images/dykking.jpg" alt="">
+
+                <div>
+                    <h1>Thailand</h1>
+                    <p>Dykking i Koh Tao, Thailand</p>
+                </div>
+
+            </div>
+
+            <div id="thailandTekst">
+
+                <h2>Thailand</h2>
+
+                <p>
+                    Koh Tao i Thailand bør være på listen over steder alle
+                    dykkere må besøke. Vanntemperaturen rundt Koh Tao er
+                    vanligvis mellom 27 og 30 grader Celsius i gjennomsnitt,
+                    som gjør det til et perfekt sted for dykking hele året.
+                    Øya er omgitt av et korallrev-økosystem som gir dykkere
+                    et mangfold av fantastisk marint liv.
+                </p>
+                <br>
+                <img src="images/bungalows.jpg" height="300px">
+                <p>Her har vi base i flotte bungalower nede ved stranden. Her kan nyte sjøluften og de flotte sol ned/opp- gangenen!</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AFRIKA -->
+        <div class="kolonne">
+
+            <div class="boks" id="afrika" onclick="visAfrika()">
+
+                <img src="images/safri.jpg" alt="">
+
+                <div>
+                    <h1>Afrika</h1>
+                    <p>Safari i Serengeti, Afrika</p>
+                </div>
+
+            </div>
+
+            <div id="afrikaTekst">
+
+                <h2>Afrika</h2>
+
+                <p>
+                    Serengeti er for mange selve drømmen om Afrika. Endeløse savanner, store løveflokker og den spektakulære migrasjonen, hvor over to millioner gnuer og sebraer vandrer mellom Serengeti og Masai Mara på jakt etter grønnere beitemarker, gjør nasjonalparken til et av verdens mest berømte naturområder. Med sitt rike dyreliv og enorme landskap byr Serengeti på safariopplevelser som er vanskelige å finne maken til.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PORTUGAL -->
+        <div class="kolonne">
+
+            <div class="boks" id="portugal" onclick="visPortugal()">
+
+                <img src="images/seiling.jpg" alt="">
+
+                <div>
+                    <h1>Portugal</h1>
+                    <p>Seiling i Vilamoura, Portugal.</p>
+                </div>
+
+            </div>
+
+            <div id="portugalTekst">
+
+                <h2>Portugal</h2>
+
+                <p>
+                   Vilamoura på Algarvekysten i Portugal er et fantastisk sted for seiling, med Marina de Vilamoura som det naturlige sentrum for både turseilere og profesjonelle lag. 
+                   Du kan bli med på guidede seilturer, solnedgangsturer (sunset sailing) eller halvdagsturer langs kysten. Mange turer inkluderer vinsmaking eller enkel mat om bord. Eller  så kan du prøve ut Vilamoura Sailing Centre, som er et verdenskjent treningssenter for konkurranseseiling. Senteret har fasiliteter som båtpark, direkte utsettingsramp og flåter med blant annet 470-, ILCA- og J/70-båter.  
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- HELLAS -->
+        <div class="kolonne">
+
+            <div class="boks" id="hellas" onclick="visHellas()">
+
+                <img src="images/hellas.jpg" alt="">
+
+                <div>
+                    <h1>Hellas</h1>
+                    <p>Reise til blue cawes, kysten av Zakynthos, Hellas</p>
+                </div>
+
+            </div>
+
+            <div id="hellasTekst">
+
+                <h2>Hellas</h2>
+
+                <p>
+                    Hvis du ønsker å få mer ut av din tid i Hellas, så er dette turen for deg. Bytt overfylte bussturer for en naturskjønn båttur over den nordlige kysten av Zakynthos. Mens du drar fra Agios Nicholaos til Navagio Bay, får du tips fra mannskapet om de beste stedene å stoppe - som de spektakulære Blue Caves, og Agios Andres Bay, med sine gamle klosterruiner.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="kolonne">
+
+            <div class="boks" id="norge" onclick="visNorge()">
+
+                <img src="images/norge.jpg" alt="">
+
+                <div>
+                    <h1>Norge</h1>
+                    <p>Reise til den norske fjellheim, Norge</p>
+                </div>
+
+            </div>
+
+            <div id="norgeTekst">
+
+                <h2>Norge</h2>
+
+                <p>
+                    Det er lite som slår å stå på toppen og nyte utsikten etter en lang tur, særlig en vakker sommerdag! Drømmer du om å gå Preikestolen, Besseggen eller en av de andre mest kjente fjellturene i landet? 
+                </p>
+
+            </div>
+
+        </div>
+
+
+       
+        <div class="kolonne">
+
+            <div class="boks" id="sveits" onclick="visSveits()">
+
+                <img src="images/sveits.jpg" alt="">
+
+                <div>
+                    <h1>Sveits</h1>
+                    <p>Ski i Zermatt, Sveits</p>
+                </div>
+
+            </div>
+
+            <div id="sveitsTekst">
+
+                <h2>Sveits</h2>
+
+                <p>
+                    Zermatt er et bilfritt skiparadis i Sveits, plassert rett under det ikoniske fjellet Matterhorn. Her får du over 360 km med løyper og snøgaranti i opptil 3 883 meters høyde. Det unike skianlegget lar deg kjøre på ski over grensen til Italia for lunsj, før du returnerer til sveitsisk gourmet og alpesjarm om kvelden.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+function visThailand() {
+
+    let tekst = document.getElementById("thailandTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+
+function visAfrika() {
+
+    let tekst = document.getElementById("afrikaTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+
+function visPortugal() {
+
+    let tekst = document.getElementById("portugalTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+
+function visHellas() {
+
+    let tekst = document.getElementById("hellasTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+
+function visNorge() {
+
+    let tekst = document.getElementById("norgeTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+
+function visSveits() {
+
+    let tekst = document.getElementById("sveitsTekst");
+
+    if (tekst.style.display === "none" || tekst.style.display === "") {
+        tekst.style.display = "block";
+    } else {
+        tekst.style.display = "none";
+    }
+
+}
+
+</script>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+</body>
+</html>
