@@ -27,7 +27,7 @@
                 display:flex;
                 flex-direction: row;
             }
-            #ventretopp{
+            #venstretopp{
                 height: 100px;
                 width: 200px;
                 display:flex;
@@ -115,6 +115,112 @@
              #tekst2 h2 {
              margin-bottom: 5px;
              }
+
+             @media screen and (max-width: 798px){
+
+    /* Linkefeltet forsvinner på mobil */
+    #linkefelt {
+        display: none;
+    }
+
+
+    /* TOPPFELT */
+    #toppfelt {
+        width: 100%;
+        height: 80px;
+        font-size: clamp(30px, 9vw, 45px);
+    }
+
+    #venstretopp {
+        width: 20%;
+        height: 80px;
+    }
+
+    #venstretopp img {
+        width: clamp(45px, 15vw, 70px);
+        height: auto;
+    }
+
+    #midttopp {
+        width: 60%;
+        height: 80px;
+    }
+
+    #hoyeretopp {
+        width: 20%;
+        height: 80px;
+        font-size: clamp(30px, 8vw, 40px);
+    }
+
+
+    /* HOVEDFELT */
+    #hovedfelt {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 600px;
+        padding: 5vw;
+
+        /* Innholdet legges under hverandre */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    /* TEKST */
+    #tekst {
+        width: 100%;
+    }
+
+    #tekst h1 {
+        font-size: clamp(32px, 9vw, 50px);
+    }
+
+    #tekst p {
+        font-size: clamp(15px, 4vw, 19px);
+        line-height: 1.5;
+    }
+
+
+    /* BILDE OG KONTAKT */
+    #bilde {
+        width: 100%;
+    }
+
+    #bilde img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+
+    /* KONTAKT */
+    #kontakt {
+        width: 100%;
+        font-size: clamp(15px, 4vw, 18px);
+    }
+
+
+    /* GOOGLE MAPS */
+    #bilde iframe {
+        width: 100%;
+        max-width: 400px;
+        height: 250px;
+        display: block;
+        margin: 20px auto;
+    }
+
+
+    /* TEKST UNDER KARTET */
+    #tekst2 {
+        width: 100%;
+        font-size: clamp(15px, 4vw, 18px);
+        line-height: 1.5;
+    }
+
+}
             
             
 

@@ -31,7 +31,7 @@
                  top: 0px;
                  z-index: 20;
             }
-            #ventretopp{
+            #venstretopp{
                 height: 100px;
                 width: 200px;
                 display:flex;
@@ -110,7 +110,7 @@
                 
              }
 
-            #surfebrettTekst {
+             #surfebrettTekst {
              display: none;
              width: 100%;
              background-color: rgb(248, 141, 102);
@@ -155,6 +155,115 @@
 
             
              }
+
+             @media screen and (max-width: 798px){
+
+    /* LINKER */
+    #linkefelt {
+        display: none;
+    }
+
+
+    /* TOPPFELT */
+    #toppfelt {
+        width: 100%;
+        height: 80px;
+        font-size: clamp(30px, 9vw, 45px);
+    }
+
+    #venstretopp {
+        width: 20%;
+        height: 80px;
+    }
+
+    #venstretopp img {
+        width: clamp(45px, 15vw, 70px);
+        height: auto;
+    }
+
+    #midttopp {
+        width: 60%;
+        height: 80px;
+    }
+
+    #hoyeretopp {
+        width: 20%;
+        height: 80px;
+        font-size: clamp(30px, 8vw, 40px);
+    }
+
+
+    /* HOVEDFELT */
+    #hovedfelt {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 600px;
+        padding: 110px 5vw 30px 5vw;
+    }
+
+
+    /* OVERSKRIFT */
+    #hovedfelt > h1 {
+        font-size: clamp(35px, 10vw, 55px);
+        margin-bottom: 30px;
+    }
+
+
+    /* PRODUKTBOKSER */
+    #surfebrett,
+    #vaatdrakt,
+    #badetoy,
+    #sko {
+        width: 90vw;
+        max-width: 500px;
+        height: auto;
+        min-height: 160px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+
+    /* BILDENE */
+    #surfebrett img,
+    #vaatdrakt img,
+    #badetoy img,
+    #sko img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+
+    /* TEKST PÅ PRODUKT */
+    #surfebrett > h1 {
+        font-size: clamp(22px, 6vw, 32px);
+        padding: 15px;
+        text-align: center;
+    }
+
+
+    /* TEKST SOM KOMMER FREM */
+    #surfebrettTekst {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #surfebrettTekst h2 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    #surfebrettTekst p {
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.5;
+    }
+
+}
 
 
 

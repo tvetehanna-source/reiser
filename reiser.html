@@ -28,7 +28,7 @@
                 flex-direction: row;
                 
             }
-            #ventretopp{
+            #venstretopp{
                 height: 100px;
                 width: 200px;
                 display:flex;
@@ -156,7 +156,154 @@
              padding: 20px;
              box-sizing: border-box;
              box-shadow: 10px 10px 20px rgb(187, 188, 91);
+
+             }
+
+             .boks:hover {
+             transform: scale(1.1);
+             }
+
+             @media screen and (max-width: 798px){
+
+    /* LINKELFELTET FORSVINNER */
+    #linkefelt {
+        display: none;
+    }
+
+
+    /* TOPPFELT */
+    #toppfelt {
+        width: 100%;
+        height: 80px;
+        font-size: clamp(30px, 9vw, 45px);
+    }
+
+    #venstretopp {
+        width: 20%;
+        height: 80px;
+    }
+
+    #venstretopp img {
+        width: clamp(45px, 15vw, 70px);
+        height: auto;
+    }
+
+    #midttopp {
+        width: 60%;
+        height: 80px;
+    }
+
+    #hoyeretopp {
+        width: 20%;
+        height: 80px;
+        font-size: clamp(30px, 8vw, 40px);
+    }
+
+
+    /* HOVEDFELT */
+    #hovedfelt {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 600px;
+        padding: 110px 5vw 30px 5vw;
+    }
+
+
+    /* REISEOVERSKRIFT */
+    #hovedfelt > h1 {
+        font-size: clamp(35px, 10vw, 55px);
+        margin-bottom: 30px;
+    }
+
+
+    /* RUTENETTET BLIR ÉN KOLONNE */
+    .rutenett {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    /* KOLONNENE */
+    .kolonne {
+        width: 100%;
+    }
+
+
+    /* REISEBOKSENE */
+    .boks {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+
+    /* BILDE */
+    .boks img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+    /* TEKST PÅ REISEBOKSEN */
+    .boks > div {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+    }
+
+
+    .boks h1 {
+        font-size: clamp(25px, 7vw, 40px);
+        margin-bottom: 10px;
+    }
+
+
+    .boks p {
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.4;
+    }
+
+
+    /* TEKST SOM KOMMER FREM */
+    #thailandTekst,
+    #afrikaTekst,
+    #portugalTekst,
+    #hellasTekst,
+    #norgeTekst,
+    #sveitsTekst {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.5;
+    }
+
+
+    /* BILDE INNE I THAILAND-TEKSTEN */
+    #thailandTekst img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+
+    /* FJERNER ZOOM-EFFEKTEN PÅ MOBIL */
+    .boks:hover {
+        transform: none;
+    }
+
 }
+
+
 
 
              
