@@ -1,348 +1,1224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scorpio forside</title>
+
+    <title>scorpio produkter</title>
+
     <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png">
+
     <style>
-        *{
-            padding:0px;
+
+        * {
+            padding: 0px;
             margin: 0px;
         }
-            #toppfelt{
-                width: 100vw;
-                height: 100px;
-                background-color: coral;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 65px;
-                font-weight: bolder;
-                background-image: url(images/bakrund1.png);
-                background-size: cover;
-                background-position: center;
-                color: rgb(246, 248, 145);
-                text-shadow:
-                 3px 3px 0px coral,
-                 6px 6px 0px coral;
-                display:flex;
-                flex-direction: row;
-                position: fixed;
-                 left: 0px;
-                 top: 0px;
-                 z-index: 20;
-            }
-            #venstretopp{
-                height: 100px;
-                width: 200px;
-                display:flex;
-                align-items: center;
-                justify-content: center;
-            }
-            #hoyeretopp{
-                height: 100px;
-                width: 100px;
-                display:flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 50px;
 
-            }
-            
-            #midttopp{
-                height: 100px;
-                width: calc(100vw - 300px);
-                display:flex;
-                align-items: center;
-                justify-content: center;
+
+
+        #toppfelt {
+            width: 100vw;
+            height: 100px;
+
+            background-color: coral;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 65px;
+            font-weight: bolder;
+
+            background-image: url(images/bakrund1.png);
+            background-size: cover;
+            background-position: center;
+
+            color: rgb(246, 248, 145);
+
+            text-shadow:
+                3px 3px 0px coral,
+                6px 6px 0px coral;
+
+            display: flex;
+            flex-direction: row;
+
+            position: fixed;
+
+            left: 0px;
+            top: 0px;
+
+            z-index: 20;
+        }
+
+
+        #venstretopp {
+            height: 100px;
+            width: 200px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        #midttopp {
+            height: 100px;
+
+            width: calc(100vw - 380px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+       
+
+        #hoyeretopp {
+            height: 100px;
+            width: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            font-size: 40px;
+        }
+
+
+      
+
+        #menyikon {
+            font-size: 50px;
+        }
+
+
+
+
+        #handlekurv {
+            position: relative;
+
+            cursor: pointer;
+
+            font-size: 40px;
+        }
+
+
         
-            }
-            #linkefelt{
-                height: 50px;
-                width: 100vw;
-                background-color: rgb(246, 248, 145);
-                display:flex;
-                justify-content: space-evenly;
-                align-items: center;
-                position: fixed;
-                 left: 0px;
-                 top: 100px;
-                 z-index: 20;
 
-                }    
+        #antall {
+            position: absolute;
 
-                 #linkefelt a{
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-weight: border;
-                font-size: 20px;
-                color: coral;
-                text-decoration: none;
-                
+            top: -8px;
+            right: -12px;
 
-            }
+            background-color: coral;
+
+            color: rgb(246, 248, 145);
+
+            font-size: 15px;
+
+            width: 25px;
+            height: 25px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        #linkefelt {
+            height: 50px;
+            width: 100vw;
+
+            background-color: rgb(246, 248, 145);
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            position: fixed;
+
+            left: 0px;
+            top: 100px;
+
+            z-index: 20;
+        }
+
+
+        #linkefelt a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            font-weight: bold;
+
+            font-size: 20px;
+
+            color: coral;
+
+            text-decoration: none;
+        }
+
 
         
-             body{
-                background-color: coral ;
-             }
+
+        body {
+            background-color: coral;
+        }
+
+
+       
+
+        #hovedfelt {
+            width: 80vw;
+            min-height: 600px;
+
+            background-color: rgb(248, 141, 102);
+
+            margin: auto;
+
+            padding: 20px;
+            padding-top: 175px;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            color: rgb(252, 221, 111);
+
+            font-size: large;
+        }
+
+
+        
+
+        .produkt {
+            width: 75vw;
+
+            margin-bottom: 60px;
+        }
+
+
+       
+
+        .hovedboks {
+            width: 75vw;
+            height: 200px;
+
+            background-color: rgb(246, 248, 145);
+
+            display: flex;
+
+            flex-direction: row;
+
+            color: coral;
+
+            box-shadow:
+                10px 10px 20px rgb(178, 93, 62);
+
+            cursor: pointer;
+        }
+
+
+        /* BILDE I HOVEDBOKS */
+
+        .hovedboks img {
+            width: 40%;
+            height: 200px;
+
+            object-fit: cover;
+        }
+
+
+        /* TEKST I HOVEDBOKS */
+
+        .hovedboks h1 {
+            padding-left: 0px;
+            padding-top: 5px;
+        }
+
+
+        /* ================= BOKS UNDER ================= */
+
+        .produktInfo {
+            display: none;
+
+            width: 75vw;
+            min-height: 300px;
+
+            background-color: rgb(246, 248, 145);
+
+            color: coral;
+
+            padding: 35px;
+
+            box-sizing: border-box;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+
+            box-shadow:
+                10px 10px 20px rgb(178, 93, 62);
+        }
+
+
+        /* ================= DE TRE PRODUKTENE ================= */
+
+        .person {
+            width: 30%;
+
+            text-align: center;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            color: coral;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+
+        /* BILDE */
+
+        .person img {
+            width: 160px;
+            height: 140px;
+
+            object-fit: cover;
+
+            display: block;
+
+            margin: 0 auto 15px auto;
+        }
+
+
+        .person p {
+            margin-top: 5px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ================= LEGG I HANDLEKURV ================= */
+
+        .leggTil {
+            background-color: coral;
+
+            color: rgb(246, 248, 145);
+
+            border: none;
+
+            padding: 10px 15px;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+        .leggTil:hover {
+            opacity: 0.8;
+        }
+
+
+        /* ================= HANDLEKURV ================= */
+
+        #handlekurvBoks {
+
+            display: none;
+
+            position: fixed;
+
+            top: 160px;
+            right: 30px;
+
+            width: 380px;
+
+            max-height: 70vh;
+
+            overflow-y: auto;
+
+            background-color: rgb(246, 248, 145);
+
+            color: coral;
+
+            padding: 25px;
+
+            box-sizing: border-box;
+
             
-             #hovedfelt{
-                width: 80vw;
-                min-height: 600px;
-                background-color: rgb(248, 141, 102);
-                margin: auto; 
-                padding: 20px;
-                padding-top: 175px;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                color: rgb(252, 221, 111);
-                font-size: large;
-               
-             }
 
-             #surfebrett{
-                width: 75vw;
-                height: 200px;
-                background-color: rgb(246, 248, 145);
-                display: flex;
-                flex-direction: row;
-                color: coral;
-                box-shadow: 10px 10px 20px rgb(178, 93, 62);
-                align-items: 
-                
-             }
-
-             #surfebrettTekst {
-             display: none;
-             width: 100%;
-             background-color: rgb(248, 141, 102);
-             padding: 20px;
-             box-sizing: border-box;
-             }
-
-            
-             
-             #vaatdrakt{
-                width: 75vw;
-                height: 200px;
-                background-color: rgb(246, 248, 145);
-                display:flex;
-                flex-direction: row;
-                color: coral;
-                box-shadow: 10px 10px 20px rgb(178, 93, 62);
-
-             
-
-             }
-
-             
-             #badetoy{
-                width: 75vw;
-                height: 200px;
-                background-color: rgb(246, 248, 145);
-                display:flex;
-                flex-direction: row;
-                color: coral;
-                box-shadow: 10px 10px 20px rgb(178, 93, 62);
-
-             }
-             #sko{
-                 width: 75vw;
-                height: 200px;
-                background-color: rgb(246, 248, 145);
-                display:flex;
-                flex-direction: row;
-                color: coral;
-                box-shadow: 10px 10px 20px rgb(178, 93, 62);
-
-            
-             }
-
-             @media screen and (max-width: 798px){
-
-    /* LINKER */
-    #linkefelt {
-        display: none;
-    }
+            z-index: 50;
+        }
 
 
-    /* TOPPFELT */
-    #toppfelt {
-        width: 100%;
-        height: 80px;
-        font-size: clamp(30px, 9vw, 45px);
-    }
-
-    #venstretopp {
-        width: 20%;
-        height: 80px;
-    }
-
-    #venstretopp img {
-        width: clamp(45px, 15vw, 70px);
-        height: auto;
-    }
-
-    #midttopp {
-        width: 60%;
-        height: 80px;
-    }
-
-    #hoyeretopp {
-        width: 20%;
-        height: 80px;
-        font-size: clamp(30px, 8vw, 40px);
-    }
+        #handlekurvBoks h2 {
+            margin-bottom: 20px;
+        }
 
 
-    /* HOVEDFELT */
-    #hovedfelt {
-        box-sizing: border-box;
-        width: 100%;
-        min-height: 600px;
-        padding: 110px 5vw 30px 5vw;
-    }
+        /* PRODUKT I HANDLEKURV */
+
+        .handlekurvProdukt {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 12px 0;
+
+            border-bottom: 2px solid coral;
+        }
 
 
-    /* OVERSKRIFT */
-    #hovedfelt > h1 {
-        font-size: clamp(35px, 10vw, 55px);
-        margin-bottom: 30px;
-    }
+        /* FJERN-KNAPP */
+
+        .fjern {
+            background-color: coral;
+
+            color: rgb(246, 248, 145);
+
+            border: none;
+
+            padding: 5px 8px;
+
+            cursor: pointer;
+
+            margin-left: 10px;
+        }
 
 
-    /* PRODUKTBOKSER */
-    #surfebrett,
-    #vaatdrakt,
-    #badetoy,
-    #sko {
-        width: 90vw;
-        max-width: 500px;
-        height: auto;
-        min-height: 160px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
+        /* TOTAL */
+
+        #total {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+        }
 
 
-    /* BILDENE */
-    #surfebrett img,
-    #vaatdrakt img,
-    #badetoy img,
-    #sko img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        object-fit: cover;
-    }
+        /* BESTILLINGSKNAPP */
+
+        #bestillingsknapp {
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            padding: 12px;
+
+            background-color: coral;
+
+            color: rgb(246, 248, 145);
+
+            border: none;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
 
 
-    /* TEKST PÅ PRODUKT */
-    #surfebrett > h1 {
-        font-size: clamp(22px, 6vw, 32px);
-        padding: 15px;
-        text-align: center;
-    }
-
-
-    /* TEKST SOM KOMMER FREM */
-    #surfebrettTekst {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    #surfebrettTekst h2 {
-        font-size: clamp(20px, 5vw, 28px);
-    }
-
-    #surfebrettTekst p {
-        font-size: clamp(14px, 4vw, 18px);
-        line-height: 1.5;
-    }
-
-}
-
-
-
-            
-            
     </style>
+
 </head>
+
+
 <body>
-   <div id="toppfelt"> 
-    
-    
-    <div id="venstretopp"><a href="index.html"><img src="images/skorpiongul..png" alt="" height="90px"></a></div>
-    <div id="midttopp">SCORPIO</div>
-    <div id="hoyeretopp">&#9776;</div>
-</div> 
-<div id="linkefelt">
-    <a href="produkter.html">PRODUKTER</a>
-    <a href="reiser.html">REISER</a>
-    <a href="omoss.html">OM OSS</a>
-</div>
 
 
-<div id="hovedfelt">
-   <h1>PRODUKTER</h1> 
+    <!-- ================= TOPPFELT ================= -->
 
-   <div>
-    <div id="surfebrett" onclick="visSurfebrett()">
-        <img src="images/surfebrett.jpg" alt="" height="200px"> 
-        <h1>SURFEBRETT</h1>
+    <div id="toppfelt">
 
-        <div id="surfebrettTekst">
 
-                <h2>Surfebrett</h2>
+        <!-- LOGO -->
 
-                <p>
-                    Koh Tao i Thailand bør være på listen over steder alle
-                    dykkere må besøke. Vanntemperaturen rundt Koh Tao er
-                    vanligvis mellom 27 og 30 grader Celsius i gjennomsnitt,
-                    som gjør det til et perfekt sted for dykking hele året.
-                    Øya er omgitt av et korallrev-økosystem som gir dykkere
-                    et mangfold av fantastisk marint liv.
-                </p>
+        <div id="venstretopp">
+
+            <a href="index.html">
+
+                <img
+                    src="images/skorpiongul..png"
+                    alt="SCORPIO logo"
+                    height="90px"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- SCORPIO -->
+
+        <div id="midttopp">
+
+            SCORPIO
+
+        </div>
+
+
+        <!-- HANDLEKURV + MENY -->
+
+        <div id="hoyeretopp">
+
+
+            <!-- HANDLEKURV -->
+
+            <div
+                id="handlekurv"
+                onclick="visHandlekurv()"
+            >
+
+                🛒
+
+                <span id="antall">
+                    0
+                </span>
 
             </div>
-        
-        
+
+
+            <!-- MENY -->
+
+            <div id="menyikon">
+
+                &#9776;
+
+            </div>
+
+
+        </div>
+
+
     </div>
+
+
+
+    <!-- ================= MENY ================= -->
+
+    <div id="linkefelt">
+
+        <a href="produkter.html">
+            PRODUKTER
+        </a>
+
+        <a href="reiser.html">
+            REISER
+        </a>
+
+        <a href="omoss.html">
+            OM OSS
+        </a>
+
+    </div>
+
+
+
+    <!-- ================= HOVEDFELT ================= -->
+
+    <div id="hovedfelt">
+
+
+        <h1>
+            PRODUKTER
+        </h1>
+
+
+
+        <!-- ================================================= -->
+        <!-- SURFEBRETT -->
+        <!-- ================================================= -->
+
+        <div class="produkt">
+
+
+            <!-- HOVEDBOKS -->
+
+            <div
+                class="hovedboks"
+                onclick="visProdukt('surfebrettInfo')"
+            >
+
+                <img
+                    src="images/surfebrett.jpg"
+                    alt="Surfebrett"
+                >
+
+                <h1>
+                    SURFEBRETT
+                </h1>
+
+            </div>
+
+
+
+            <!-- BOKS UNDER -->
+
+            <div
+                id="surfebrettInfo"
+                class="produktInfo"
+            >
+
+
+                <div class="person">
+
+                    <img
+                        src="images/surfebrett.jpg"
+                        alt="Surfebrett barn"
+                    >
+
+                    <p>
+                        Surfebrett barn
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Surfebrett barn', 499)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/surfebrett.jpg"
+                        alt="Surfebrett dame"
+                    >
+
+                    <p>
+                        Surfebrett dame
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Surfebrett dame', 699)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/surfebrett.jpg"
+                        alt="Surfebrett herre"
+                    >
+
+                    <p>
+                        Surfebrett herre
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Surfebrett herre', 699)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- VÅTDRAKT -->
+        <!-- ================================================= -->
+
+        <div class="produkt">
+
+
+            <div
+                class="hovedboks"
+                onclick="visProdukt('vaatdraktInfo')"
+            >
+
+                <img
+                    src="images/våtdrakt.jpg"
+                    alt="Våtdrakt"
+                >
+
+                <h1>
+                    VÅTDRAKT
+                </h1>
+
+            </div>
+
+
+
+            <div
+                id="vaatdraktInfo"
+                class="produktInfo"
+            >
+
+
+                <div class="person">
+
+                    <img
+                        src="images/våtdrakt.jpg"
+                        alt="Våtdrakt barn"
+                    >
+
+                    <p>
+                        Våtdrakt barn
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Våtdrakt barn', 399)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/våtdrakt.jpg"
+                        alt="Våtdrakt dame"
+                    >
+
+                    <p>
+                        Våtdrakt dame
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Våtdrakt dame', 599)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/våtdrakt.jpg"
+                        alt="Våtdrakt herre"
+                    >
+
+                    <p>
+                        Våtdrakt herre
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Våtdrakt herre', 599)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BADETØY -->
+        <!-- ================================================= -->
+
+        <div class="produkt">
+
+
+            <div
+                class="hovedboks"
+                onclick="visProdukt('badetoyInfo')"
+            >
+
+                <img
+                    src="images/badetøy.jpg"
+                    alt="Badetøy"
+                >
+
+                <h1>
+                    BADETØY
+                </h1>
+
+            </div>
+
+
+
+            <div
+                id="badetoyInfo"
+                class="produktInfo"
+            >
+
+
+                <div class="person">
+
+                    <img
+                        src="images/badetøy.jpg"
+                        alt="Badetøy barn"
+                    >
+
+                    <p>
+                        Badetøy barn
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Badetøy barn', 299)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/badetøy.jpg"
+                        alt="Badetøy dame"
+                    >
+
+                    <p>
+                        Badetøy dame
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Badetøy dame', 399)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/badetøy.jpg"
+                        alt="Badetøy herre"
+                    >
+
+                    <p>
+                        Badetøy herre
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Badetøy herre', 399)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- SKO -->
+        <!-- ================================================= -->
+
+        <div class="produkt">
+
+
+            <div
+                class="hovedboks"
+                onclick="visProdukt('skoInfo')"
+            >
+
+                <img
+                    src="images/sko.jpg"
+                    alt="Sko"
+                >
+
+                <h1>
+                    SKO
+                </h1>
+
+            </div>
+
+
+
+            <div
+                id="skoInfo"
+                class="produktInfo"
+            >
+
+
+                <div class="person">
+
+                    <img
+                        src="images/sko.jpg"
+                        alt="Sko barn"
+                    >
+
+                    <p>
+                        Sko barn
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Sko barn', 299)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/sko.jpg"
+                        alt="Sko dame"
+                    >
+
+                    <p>
+                        Sko dame
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Sko dame', 499)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+
+                <div class="person">
+
+                    <img
+                        src="images/sko.jpg"
+                        alt="Sko herre"
+                    >
+
+                    <p>
+                        Sko herre
+                    </p>
+
+                    <button
+                        class="leggTil"
+                        onclick="leggTilProdukt('Sko herre', 499)"
+                    >
+                        LEGG I HANDLEKURV
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= HANDLEKURV ================= -->
+
+    <div id="handlekurvBoks">
+
+
+        <h2>
+            HANDLEKURV
+        </h2>
+
+
+        <div id="handlekurvInnhold">
+
+            Handlekurven er tom.
+
+        </div>
+
+
+        <div id="total">
+
+            Totalt: 0 kr
+
+        </div>
+
+
+        <button id="bestillingsknapp">
+
+            GÅ TIL BESTILLING
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script>
-        function visSurfebrett() {
-     let tekst = document.getElementById("surfebrettTekst");
 
-    if (tekst.style.display === "none" || tekst.style.display === "") {
-        tekst.style.display = "block";
-    } else {
-        tekst.style.display = "none";
-    }
+
+        /* ================= ÅPNE PRODUKTBOKS ================= */
+
+        function visProdukt(id) {
+
+            let boks =
+                document.getElementById(id);
+
+
+            if (boks.style.display === "flex") {
+
+                boks.style.display = "none";
+
+            }
+
+            else {
+
+                boks.style.display = "flex";
+
+            }
+
         }
+
+
+
+        /* ================= HANDLEKURV ================= */
+
+        let handlekurv =
+            JSON.parse(
+                localStorage.getItem("handlekurv")
+            ) || [];
+
+
+
+        /* LEGG TIL PRODUKT */
+
+        function leggTilProdukt(navn, pris) {
+
+
+            handlekurv.push({
+
+                navn: navn,
+
+                pris: pris
+
+            });
+
+
+            localStorage.setItem(
+                "handlekurv",
+                JSON.stringify(handlekurv)
+            );
+
+
+            oppdaterHandlekurv();
+
+
+            /* Åpner handlekurven automatisk */
+
+            document.getElementById(
+                "handlekurvBoks"
+            ).style.display = "block";
+
+        }
+
+
+
+        /* VIS / SKJUL HANDLEKURV */
+
+        function visHandlekurv() {
+
+
+            let boks =
+                document.getElementById(
+                    "handlekurvBoks"
+                );
+
+
+            if (boks.style.display === "block") {
+
+                boks.style.display = "none";
+
+            }
+
+            else {
+
+                boks.style.display = "block";
+
+            }
+
+        }
+
+
+
+        /* OPPDATER HANDLEKURV */
+
+        function oppdaterHandlekurv() {
+
+
+            let innhold =
+                document.getElementById(
+                    "handlekurvInnhold"
+                );
+
+
+            let antall =
+                document.getElementById(
+                    "antall"
+                );
+
+
+            let total =
+                document.getElementById(
+                    "total"
+                );
+
+
+            /* ANTALL */
+
+            antall.innerHTML =
+                handlekurv.length;
+
+
+
+            /* TOM HANDLEKURV */
+
+            if (handlekurv.length === 0) {
+
+
+                innhold.innerHTML =
+                    "Handlekurven er tom.";
+
+
+                total.innerHTML =
+                    "Totalt: 0 kr";
+
+
+                return;
+
+            }
+
+
+
+            /* TØM INNHOLDET */
+
+            innhold.innerHTML = "";
+
+
+
+            let sum = 0;
+
+
+
+            /* VIS PRODUKTENE */
+
+            handlekurv.forEach(
+                function(produkt, index) {
+
+
+                    sum += produkt.pris;
+
+
+                    innhold.innerHTML += `
+
+                        <div class="handlekurvProdukt">
+
+                            <span>
+                                ${produkt.navn}
+                                <br>
+                                ${produkt.pris} kr
+                            </span>
+
+                            <button
+                                class="fjern"
+                                onclick="fjernProdukt(${index})"
+                            >
+                                X
+                            </button>
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+
+
+            /* TOTAL */
+
+            total.innerHTML =
+                "Totalt: " + sum + " kr";
+
+        }
+
+
+
+        /* FJERN PRODUKT */
+
+        function fjernProdukt(index) {
+
+
+            handlekurv.splice(index, 1);
+
+
+            localStorage.setItem(
+                "handlekurv",
+                JSON.stringify(handlekurv)
+            );
+
+
+            oppdaterHandlekurv();
+
+        }
+
+
+
+        /* START */
+
+        oppdaterHandlekurv();
+
+
     </script>
 
-    <br>
-    <br>
 
-    <div id="vaatdrakt"><img src="images/våtdrakt.jpg" alt="" height="200px">
-        
-        
-    </div>
-    <br>
-    <br>
-
-    <div id="badetoy"><img src="images/badetøy.jpg" alt="" height="200px"></div>
-    <br>
-    <br>
-
-    <div id="sko"><img src="images/sko.jpg" alt="" height="200px"></div>
-   </div>
-   
-
-</div>
-</div>
 </body>
+
 </html>
